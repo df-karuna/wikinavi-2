@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#669999"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <EditText
+                                    android:id="@+id/departureSearch"
+                                    android:layout_width="148dp"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10" >
+                                </EditText>
+
+                                <Button
+                                    android:id="@+id/departureSearchBtn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="34dp"
+                                    android:text="출발지조회" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <EditText
+                                    android:id="@+id/destSearch"
+                                    android:layout_width="148dp"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10" >
+                                </EditText>
+
+                                <Button
+                                    android:id="@+id/destSearchBtn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="34dp"
+                                    android:text="도착지조회" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+</LinearLayout>
