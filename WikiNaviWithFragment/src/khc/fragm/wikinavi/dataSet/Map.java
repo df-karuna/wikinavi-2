@@ -1,4 +1,4 @@
-package khc.wikinavi.dataSet;
+package khc.fragm.wikinavi.dataSet;
 
 public class Map {
 	private int mapId = 0;

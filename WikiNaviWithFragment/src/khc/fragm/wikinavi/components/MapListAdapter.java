@@ -1,25 +1,25 @@
-package khc.wikinavi.components;
+package khc.fragm.wikinavi.components;
 
-import java.util.ArrayList;
+import java.util.List;
 
-import android.R;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-import khc.wikinavi.dataSet.Map;
+import khc.fragm.wikinavi.R;
+import khc.fragm.wikinavi.dataSet.Map;
 
 public class MapListAdapter extends BaseAdapter {
 
 	private LayoutInflater inflater;
-	private ArrayList<Map> data;
+	private List<Map> data;
 	private int layout;
 
-	public MapListAdapter(Context context, int layout, ArrayList<Map> data) {
+	public MapListAdapter(Context context, int layout, List<Map> maps) {
 		this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		this.data = data;
+		this.data = maps;
 		this.layout = layout;
 	}
 
@@ -46,11 +46,13 @@ public class MapListAdapter extends BaseAdapter {
 
 		Map listviewitem = data.get(position);
 		
+		
 //		ImageView icon = (ImageView) convertView.findViewById(R.id.imageview);
 //		icon.setImageResource(listviewitem.getIcon());
-//		TextView mapName = (TextView) convertView.findViewById(R.id.);
-//		mapName.setText(listviewitem.getName());
-//		TextView mapAddr = (TextView) convertView.findViewById(R.id.mapName);
+		TextView mapName = (TextView) convertView.findViewById(R.id.map_name);
+		mapName.setText(listviewitem.getName());
+		TextView mapAddr = (TextView) convertView.findViewById(R.id.map_addr);
+		mapName.setText(listviewitem.getAddress());
 
 		return convertView;
 	}

@@ -1,4 +1,4 @@
-package khc.wikinavi.dataSet;
+package khc.fragm.wikinavi.dataSet;
 
 public class Vertex {
 	private int vertexId;
