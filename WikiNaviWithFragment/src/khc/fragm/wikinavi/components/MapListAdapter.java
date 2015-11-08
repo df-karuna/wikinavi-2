@@ -52,7 +52,7 @@ public class MapListAdapter extends BaseAdapter {
 		TextView mapName = (TextView) convertView.findViewById(R.id.map_name);
 		mapName.setText(listviewitem.getName());
 		TextView mapAddr = (TextView) convertView.findViewById(R.id.map_addr);
-		mapName.setText(listviewitem.getAddress());
+		mapAddr.setText(listviewitem.getAddress());
 
 		return convertView;
 	}

@@ -20,6 +20,8 @@ import khc.fragm.wikinavi.dataSet.Map;
 public class MapInfoAsyncTask extends AsyncTask<String, Void, List<Map>> {
 	private WeakReference<ListView> mListView = null;
 	private WeakReference<Context> mContext = null;
+
+	final String TAG = "wikinavi";
 	
 	public MapInfoAsyncTask(Context context, ListView listView){
 		mContext = new WeakReference<Context>(context);
@@ -34,15 +36,15 @@ public class MapInfoAsyncTask extends AsyncTask<String, Void, List<Map>> {
 		
 		uri.append("/api/maps");
 		
-		for(String s : params){
-			uri.append("/")
-				.append(s);
+		if(params != null){
+			uri.append("?title=")
+				.append(params[0]);
 		}
 		
 		try {
 			Type mapCollections = new TypeToken<List<Map>>(){}.getType();
 			
-			Log.v("mapInfo", "begin");
+			Log.v("wikinavi", "begin");
 			@SuppressWarnings("unchecked")
 			
 			List<Map> maps = (ArrayList<Map>)parser.parse(uri.toString(), mapCollections);
@@ -50,9 +52,9 @@ public class MapInfoAsyncTask extends AsyncTask<String, Void, List<Map>> {
 			return maps;
 			
 		} catch(Exception ex){
-			Log.d("mapInfo", ex.getMessage());
+			Log.d("wikinavi", ex.getMessage());
 		} finally {
-			Log.v("mapInfo", "end");
+			Log.v("wikinavi", "end");
 		}
 		return null;
 	}

@@ -22,7 +22,7 @@ import android.os.Build;
 
 public class MainActivity extends FragmentActivity implements OnClickListener {
 
-	final String TAG = "MainActivity";
+	final String TAG = "wikinavi";
 	
 	private enum FRAGMENT_INDEX {SELECT_MAP, VIEW_MAP, SEARCH_DEST, MORE_VIEW}
 	private FRAGMENT_INDEX mCurrentFragmentIndex ;
