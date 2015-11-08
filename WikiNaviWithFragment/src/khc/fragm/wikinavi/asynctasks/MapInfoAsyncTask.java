@@ -29,7 +29,7 @@ public class MapInfoAsyncTask extends AsyncTask<String, Void, List<Map>> {
 	@Override
 	protected List<Map> doInBackground(String... params) {
 		// TODO Auto-generated method stub
-		HttpJsonParser parser = new HttpJsonParser("http://172.30.1.40:8080");
+		HttpJsonParser parser = new HttpJsonParser("http://106.249.235.42:8123");
 		StringBuilder uri = new StringBuilder();
 		
 		uri.append("/api/maps");
@@ -66,7 +66,7 @@ public class MapInfoAsyncTask extends AsyncTask<String, Void, List<Map>> {
 //			for(Map m : maps){
 //				data.add(new MapListViewItem(m));
 //			}
-			
+				
 			MapListAdapter mla = new MapListAdapter(mContext.get(), R.layout.map_list_item, maps);
 			mListView.get().setAdapter(mla);
 		}

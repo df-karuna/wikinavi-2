@@ -17,6 +17,6 @@ public class MoreViewFrag extends Fragment {
 		
 		View v = inflater.inflate(R.layout.more_view, container, false);
 		
-		return super.onCreateView(inflater, container, savedInstanceState);
+		return v;
 	}
 }

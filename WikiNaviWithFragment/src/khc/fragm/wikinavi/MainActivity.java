@@ -36,30 +36,15 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 		bt_selectMap.setOnClickListener(this);
 		Button bt_moreView = (Button) findViewById(R.id.bt_moreView);
 		bt_moreView.setOnClickListener(this);
+		Button bt_searchDest = (Button) findViewById(R.id.bt_searchDest);
+		bt_searchDest.setOnClickListener(this);
+		Button bt_viewMap = (Button) findViewById(R.id.bt_viewMap);
+		bt_viewMap.setOnClickListener(this);
 
 		mCurrentFragmentIndex = FRAGMENT_INDEX.SELECT_MAP;
 
 		fragmentReplace(mCurrentFragmentIndex);
 	}
-//
-//	@Override
-//	public boolean onCreateOptionsMenu(Menu menu) {
-//		// Inflate the menu; this adds items to the action bar if it is present.
-//		getMenuInflater().inflate(R.menu.main, menu);
-//		return true;
-//	}
-//
-//	@Override
-//	public boolean onOptionsItemSelected(MenuItem item) {
-//		// Handle action bar item clicks here. The action bar will
-//		// automatically handle clicks on the Home/Up button, so long
-//		// as you specify a parent activity in AndroidManifest.xml.
-//		int id = item.getItemId();
-//		if (id == R.id.action_settings) {
-//			return true;
-//		}
-//		return super.onOptionsItemSelected(item);
-//	}
 	
 	public void fragmentReplace(FRAGMENT_INDEX reqNewFragmentIndex) {
 
