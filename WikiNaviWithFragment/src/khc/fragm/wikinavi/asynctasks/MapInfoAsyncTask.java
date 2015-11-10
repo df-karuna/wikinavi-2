@@ -8,6 +8,7 @@ import java.util.List;
 import com.google.gson.reflect.TypeToken;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.ListView;
@@ -68,7 +69,10 @@ public class MapInfoAsyncTask extends AsyncTask<String, Void, List<Map>> {
 //			for(Map m : maps){
 //				data.add(new MapListViewItem(m));
 //			}
-				
+			
+//			Intent i = new Intent(this, VertexInfoAsyncTask.class);
+//			startActivity(i);
+			
 			MapListAdapter mla = new MapListAdapter(mContext.get(), R.layout.map_list_item, maps);
 			mListView.get().setAdapter(mla);
 		}

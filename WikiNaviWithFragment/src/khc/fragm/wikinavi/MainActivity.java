@@ -18,7 +18,10 @@ import khc.fragm.wikinavi.frags.MoreViewFrag;
 import khc.fragm.wikinavi.frags.SearchDestFrag;
 import khc.fragm.wikinavi.frags.SelectMapFrag;
 import khc.fragm.wikinavi.frags.ViewMapFrag;
+import khc.fragm.wikinavi.asynctasks.VertexInfoAsyncTask;
 import android.os.Build;
+
+
 
 public class MainActivity extends FragmentActivity implements OnClickListener {
 
@@ -40,7 +43,13 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 		bt_searchDest.setOnClickListener(this);
 		Button bt_viewMap = (Button) findViewById(R.id.bt_viewMap);
 		bt_viewMap.setOnClickListener(this);
-
+		
+		// beacon vertex 정보 수신 
+		// bluetooth scan start
+		VertexInfoAsyncTask ble = new VertexInfoAsyncTask();
+		ble.init();
+		
+		
 		mCurrentFragmentIndex = FRAGMENT_INDEX.SELECT_MAP;
 
 		fragmentReplace(mCurrentFragmentIndex);

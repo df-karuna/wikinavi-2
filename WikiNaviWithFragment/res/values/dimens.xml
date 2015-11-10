@@ -4,4 +4,7 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
+    <dimen name="activity_connect_item_row_margin">8dp</dimen>
+    <dimen name="activity_connect_group_delimiter_height">20dp</dimen>
+    
 </resources>
