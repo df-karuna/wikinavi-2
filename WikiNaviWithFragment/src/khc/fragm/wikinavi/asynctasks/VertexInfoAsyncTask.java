@@ -85,7 +85,7 @@ public class VertexInfoAsyncTask extends AsyncTask<String, Void, List<Vertex>> {
 			for(Vertex v : result){
 				Log.d("mainActivity", v.getMacAddr());
 			}
-		//init();
+		init();
 	}
 
 	private void terminateIfNotBLE() {
@@ -111,7 +111,7 @@ public class VertexInfoAsyncTask extends AsyncTask<String, Void, List<Vertex>> {
 		setCentralManager();
 		terminateIfNotBLE();
 		turnOnBluetooth();
-		scan();
+		//scan();
 	}
 
 	private void setCentralManager() {
@@ -125,8 +125,6 @@ public class VertexInfoAsyncTask extends AsyncTask<String, Void, List<Vertex>> {
 		centralManager.setPeripheralScanListener(new PeripheralScanListener() {
 			@Override
 			public void onPeripheralScan(Central central, final Peripheral peripheral) {
-				Log.i("mainActivity", "ERROR �߻��߻��߻��߻�");
-				Log.i("mainActivity", "onPeripheralScan() : peripheral : " + peripheral);
 
 				ApplicationConfig.mainActivityContext.runOnUiThread(new Runnable() {
 					public void run() {
@@ -166,10 +164,10 @@ public class VertexInfoAsyncTask extends AsyncTask<String, Void, List<Vertex>> {
 		centralManager.stopScanning();
 	}
 
+	
 	private void clear() {
 		listAdapter.clear();
 	}
-	
 	
 	// private void showPeripherials(){
 	// // String BDAddressToFind = "D0:39:72:A4:96:FD";

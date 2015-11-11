@@ -65,7 +65,7 @@ public class MapInfoAsyncTask extends AsyncTask<String, Void, List<Map>> {
 	protected  void onPostExecute(List<Map> maps) {
 
 		if(maps != null){
-			Log.i("TAG", "map ���� ����.");
+			Log.i("TAG", "NO MAP.");
 						
 //			ArrayList<Map> data = new ArrayList();
 //			for(Map m : maps){
