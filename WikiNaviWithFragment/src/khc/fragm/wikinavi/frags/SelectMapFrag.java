@@ -48,6 +48,7 @@ public class SelectMapFrag extends Fragment implements OnClickListener{
 		MapInfoAsyncTask task = new MapInfoAsyncTask(mView.getContext(), listView);
 		
 		task.execute(text);
+		
 	}
 
 }

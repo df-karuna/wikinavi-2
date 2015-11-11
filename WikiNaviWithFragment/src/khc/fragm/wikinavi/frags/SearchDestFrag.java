@@ -16,6 +16,8 @@ public class SearchDestFrag extends Fragment {
 		View v = inflater.inflate(R.layout.search_dest, container, false);
 		Log.d("minque", "selectMapFrag");
 		
+		
+		
 		return v;
 	}
 
