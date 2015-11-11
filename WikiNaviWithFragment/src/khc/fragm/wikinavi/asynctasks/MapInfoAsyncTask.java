@@ -49,6 +49,7 @@ public class MapInfoAsyncTask extends AsyncTask<String, Void, List<Map>> {
 			@SuppressWarnings("unchecked")
 			
 			List<Map> maps = (ArrayList<Map>)parser.parse(uri.toString(), mapCollections);
+
 			
 			return maps;
 			
@@ -61,15 +62,16 @@ public class MapInfoAsyncTask extends AsyncTask<String, Void, List<Map>> {
 	}
 	
 	@Override
-	protected  void onPostExecute(List<Map> maps){
+	protected  void onPostExecute(List<Map> maps) {
 
 		if(maps != null){
-
+			Log.i("TAG", "map ���� ����.");
+						
 //			ArrayList<Map> data = new ArrayList();
 //			for(Map m : maps){
 //				data.add(new MapListViewItem(m));
 //			}
-			
+//			
 //			Intent i = new Intent(this, VertexInfoAsyncTask.class);
 //			startActivity(i);
 			

@@ -19,6 +19,7 @@ import khc.fragm.wikinavi.frags.SearchDestFrag;
 import khc.fragm.wikinavi.frags.SelectMapFrag;
 import khc.fragm.wikinavi.frags.ViewMapFrag;
 import khc.fragm.wikinavi.asynctasks.VertexInfoAsyncTask;
+import khc.fragm.wikinavi.config.ApplicationConfig;
 import android.os.Build;
 
 
@@ -29,6 +30,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 	
 	private enum FRAGMENT_INDEX {SELECT_MAP, VIEW_MAP, SEARCH_DEST, MORE_VIEW}
 	private FRAGMENT_INDEX mCurrentFragmentIndex ;
+	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -44,15 +46,19 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 		Button bt_viewMap = (Button) findViewById(R.id.bt_viewMap);
 		bt_viewMap.setOnClickListener(this);
 		
-		// beacon vertex Á¤º¸ ¼ö½Å 
-		// bluetooth scan start
-		VertexInfoAsyncTask ble = new VertexInfoAsyncTask();
-		ble.init();
-		
 		
 		mCurrentFragmentIndex = FRAGMENT_INDEX.SELECT_MAP;
 
 		fragmentReplace(mCurrentFragmentIndex);
+		
+		ApplicationConfig.mainActivityContext = this;
+		
+		// Beacon vertex ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 
+		// Bluetooth scan start
+		VertexInfoAsyncTask vertexInfoAsyncTask = new VertexInfoAsyncTask(getApplicationContext());
+		Log.d("tag", "before excute");
+		vertexInfoAsyncTask.execute("1", "", "beacon");
+		Log.d("tag", "after excute");
 	}
 	
 	public void fragmentReplace(FRAGMENT_INDEX reqNewFragmentIndex) {
