@@ -22,7 +22,6 @@ public class SelectMapFrag extends Fragment implements OnClickListener{
 		
 		mView = inflater.inflate(R.layout.select_map, container, false);
 		
-		
 		Button bt_searchMap = (Button)mView.findViewById(R.id.bt_searchMap);
 		
 		bt_searchMap.setOnClickListener(this);

@@ -9,12 +9,13 @@ import android.view.ViewGroup;
 import khc.fragm.wikinavi.R;
 
 public class ViewMapFrag extends Fragment {
+	final String TAG = "ViewMapFrag";
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		
 		View v = inflater.inflate(R.layout.view_map, container, false);
-		Log.d("minque", "selectMapFrag");
+		Log.d(TAG, TAG + " View");
 		
 		return v;
 	}
