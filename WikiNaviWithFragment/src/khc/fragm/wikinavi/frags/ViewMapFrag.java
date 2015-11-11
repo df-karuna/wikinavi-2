@@ -13,16 +13,14 @@ import khc.fragm.wikinavi.lib.ImageDownloader;
 import khc.fragm.wikinavi.lib.ImageDownloader.Mode;
 
 public class ViewMapFrag extends Fragment {
-	
+
 	View mView = null;
-	
-	@Override
+	final String TAG = "ViewMapFrag";
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		
 		mView = inflater.inflate(R.layout.view_map, container, false);
 		Log.d("minque", "selectMapFrag");
-		
 		ImageDownloader downloader = new ImageDownloader();
 		downloader.setMode(Mode.CORRECT);
 		
