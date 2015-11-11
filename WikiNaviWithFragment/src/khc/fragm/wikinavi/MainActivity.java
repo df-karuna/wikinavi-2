@@ -31,6 +31,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
 
 		Button bt_selectMap = (Button) findViewById(R.id.bt_selectMap);
 		bt_selectMap.setOnClickListener(this);

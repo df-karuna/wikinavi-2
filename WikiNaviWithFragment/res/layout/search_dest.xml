@@ -7,7 +7,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#669999"
+        android:background="#77FFFFFF"
         android:orientation="vertical" >
 
         <LinearLayout
@@ -17,15 +17,17 @@
 
             <EditText
                 android:id="@+id/departureSearch"
-                android:layout_width="148dp"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:ems="10" >
             </EditText>
 
             <Button
                 android:id="@+id/departureSearchBtn"
-                android:layout_width="match_parent"
+                android:layout_width="122dp"
                 android:layout_height="34dp"
+                android:background="#e5e5e5"
+                android:height="30dp"
                 android:text="출발지조회" />
         </LinearLayout>
 
@@ -38,26 +40,34 @@
                 android:id="@+id/destSearch"
                 android:layout_width="148dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="0.87"
                 android:ems="10" >
             </EditText>
 
             <Button
                 android:id="@+id/destSearchBtn"
-                android:layout_width="match_parent"
+                android:layout_width="119dp"
                 android:layout_height="34dp"
+                android:background="#e5e5e5"
+                android:height="30dp"
                 android:text="도착지조회" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingTop="5dp" >
 
             <Button
                 android:id="@+id/pathSearchBtn"
                 android:layout_width="match_parent"
                 android:layout_height="34dp"
+                android:background="#bebebe"
+                android:height="34dp"
                 android:text="길찾기" />
+
         </LinearLayout>
     </LinearLayout>
 
@@ -65,6 +75,7 @@
         android:id="@+id/searchScrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#ffffffff"
         android:fillViewport="true" >
 
         <ListView

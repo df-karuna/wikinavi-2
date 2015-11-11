@@ -1,8 +1,9 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#008ae6"
     tools:context="khc.fragm.wikinavi.MainActivity"
     tools:ignore="MergeRootFrame" >
 
@@ -10,30 +11,34 @@
         android:id="@+id/ll_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1" 
-        android:orientation="horizontal"/>
+        android:layout_above="@+id/linearLayout1"
+        android:layout_weight="1"
+        android:background="#2fffffff"
+        android:orientation="horizontal" />
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
-        android:background="#ffffffff"
-        android:orientation="horizontal" 
-        android:layout_gravity="bottom">
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal" >
 
         <Button
             android:id="@+id/bt_selectMap"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="지도선택" />
+            android:background="#e5e5e5"
+            android:text="지도선택"
+            android:textColor="#3c3c3c" />
 
         <Button
             android:id="@+id/bt_viewMap"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#e5e5e5"
+            android:enabled="false"
             android:text="지도보기" />
 
         <Button
@@ -41,6 +46,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#e5e5e5"
+            android:enabled="false"
             android:text="길찾기" />
 
         <Button
@@ -48,7 +55,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="더보기" />
+            android:background="#e5e5e5"
+            android:text="더보기"
+            android:textColor="#3c3c3c" />
+
     </LinearLayout>
 
-</FrameLayout>
+</RelativeLayout>

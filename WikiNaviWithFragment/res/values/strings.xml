@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">WikiNaviWithFragment</string>
+    <string name="app_name">함께 만들어가는 실내지도, 위키네비</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
