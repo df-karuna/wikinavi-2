@@ -54,7 +54,7 @@
             android:orientation="horizontal" >
 
             <Button
-                android:id="@+id/routeSearchBtn"
+                android:id="@+id/pathSearchBtn"
                 android:layout_width="match_parent"
                 android:layout_height="34dp"
                 android:text="길찾기" />

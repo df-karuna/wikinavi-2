@@ -30,8 +30,8 @@ public class VertexListAdapter extends BaseAdapter {
 	}
 
 	@Override
-	public String getItem(int position) {
-		return data.get(position).getName();
+	public Vertex getItem(int position) {
+		return data.get(position);
 	}
 
 	@Override
